@@ -133,7 +133,7 @@ if Config.QBCore then
                     header = v.label,
                     txt = "$"..v.price,
                     params = {
-                        event = 'k-stocks:paytype',
+                        event = 'k-fuel:paytype',
                         args = {
                             name = k,
                             price = v.price,
@@ -160,7 +160,7 @@ if Config.QBCore then
                 header = "Cash",
                 txt = "$"..price,
                 params = {
-                    event = 'k-stocks:paytype',
+                    event = 'k-fuel:paytype',
                     args = {
                         name = name,
                         price = price,
@@ -173,7 +173,7 @@ if Config.QBCore then
                 header = "Debit",
                 txt = "$"..price,
                 params = {
-                    event = 'k-stocks:paytype',
+                    event = 'k-fuel:paytype',
                     args = {
                         name = name,
                         price = price,
@@ -187,7 +187,7 @@ if Config.QBCore then
             header = "Credit",
             txt = "$"..price,
             params = {
-                event = 'k-stocks:paytype',
+                event = 'k-fuel:paytype',
                 args = {
                     name = name,
                     price = price,
@@ -199,8 +199,8 @@ if Config.QBCore then
         exports['qb-menu']:openMenu(paytype)
     end)
 
-    RegisterNetEvent('k-stocks:buycan', function(data)
-        TriggerServerEvent('k-stocks:payforcan', data)
+    RegisterNetEvent('k-fuel:buycan', function(data)
+        TriggerServerEvent('k-fuel:payforcan', data)
     end)
 
     RegisterNetEvent('k-fuel:fueltypemenu', function(data,fuel)
@@ -217,7 +217,7 @@ if Config.QBCore then
                     header = v,
                     txt = "$"..Config.Locations[data.station]['pricing'].refuel.."/gallon Unleaded",
                     params = {
-                        event = 'k-stocks:pumpmenu',
+                        event = 'k-fuel:pumpmenu',
                         args = {
                             station = data.station,
                             currentfuel = fuel,
