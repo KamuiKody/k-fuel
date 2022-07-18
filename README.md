@@ -11,6 +11,7 @@ This resource is prereleased untested and still under developement this is by no
 ```
 ### Future Plans / Stuff to do
 ```
+-- need to make an sql file to add fueltype to player_vehicles i think 
 -- Nothing at all has been tested 
 -- still need to add spill functions
 -- add all the pumps in the city
